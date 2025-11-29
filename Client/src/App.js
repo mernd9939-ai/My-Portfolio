@@ -55,7 +55,7 @@ const handleSendOtp = async () => {
       return;
     }
     // CALL YOUR API — replace URL with your real endpoint
-    const res = await fetch("http://localhost:5000/send-otp", {
+    const res = await fetch("https://portfolio-l4fm.onrender.com/send-otp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ phone }),
@@ -230,7 +230,7 @@ const resendOtp = async () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/send-email", {
+      const res = await fetch("https://portfolio-l4fm.onrender.com/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
